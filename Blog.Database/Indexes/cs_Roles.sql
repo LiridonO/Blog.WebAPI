@@ -1,0 +1,5 @@
+﻿CREATE NONCLUSTERED COLUMNSTORE INDEX [cs_Roles]
+	ON Roles
+	(
+		[Name]
+	)

@@ -1,0 +1,31 @@
+﻿CREATE TABLE [dbo].[Users]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL,
+	[Name] NVARCHAR(MAX) NULL,
+	[LastName] NVARCHAR(MAX) NULL,
+	[Birthdate] DATETIME NOT NULL,
+	[Gender] TINYINT NOT NULL,
+	[InsertedBy] UNIQUEIDENTIFIER NULL,
+	[LastEditedBy] UNIQUEIDENTIFIER NULL,
+	[DeletedBy] UNIQUEIDENTIFIER NULL,
+	[InsertedDate] DATETIME NOT NULL,
+	[LastEditedDate] DATETIME NULL,
+	[DeletedDate] DATETIME NULL,
+	[IsDeleted] BIT NOT NULL,
+	[UserName] NVARCHAR(256) NULL,
+	[NormalizedUserName] NVARCHAR(256) NULL,
+	[Email] NVARCHAR(256) NULL,
+	[NormalizedEmail] NVARCHAR(256) NULL,
+	[EmailConfirmed] BIT NOT NULL,
+	[PasswordHash] NVARCHAR(MAX) NULL,
+	[SecurityStamp] NVARCHAR(MAX) NULL,
+	[ConcurrencyStamp] NVARCHAR(MAX) NULL,
+	[PhoneNumber] NVARCHAR(MAX) NULL,
+	[PhoneNumberConfirmed] BIT NOT NULL,
+	[TwoFactorEnabled] BIT NOT NULL,
+	[LockOutEnd] DATETIMEOFFSET NULL,
+	[LockOutEnabled] BIT NOT NULL,
+	[AccessFailedCount] INT NOT NULL
+
+	CONSTRAINT PK_Users_Id PRIMARY KEY(Id) WITH(FILLFACTOR=90),
+)

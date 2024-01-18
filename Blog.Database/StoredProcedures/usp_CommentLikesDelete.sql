@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE [dbo].[usp_CommentLikesDelete]
+(
+	@Id UNIQUEIDENTIFIER
+)
+AS
+BEGIN
+	SET NOCOUNT ON
+	
+	DELETE FROM CommentLikes Where Id = @Id
+	OPTION(RECOMPILE)
+END

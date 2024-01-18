@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[UserTokens]
+(
+	[UserId] UNIQUEIDENTIFIER NOT NULL,
+	[LoginProvider] NVARCHAR(450) NOT NULL,
+	[Name] NVARCHAR(450) NOT NULL,
+	[Value] NVARCHAR(MAX) NULL
+
+	CONSTRAINT FK_UserTokens_UserId FOREIGN KEY(UserId) REFERENCES Users(Id)
+)
